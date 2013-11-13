@@ -14,7 +14,7 @@ function tableRowsFor(recordings){
 }
 
 function play(e){
-	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
+	Ti.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
 	
 	var player;
 	
