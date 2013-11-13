@@ -22,6 +22,9 @@ module.exports.sync = function(method, model, options) {
             model.set({
                 recordings: respObj.recordings
             });
+            model.set({
+                numRecordings: respObj.numRecordings
+            });
             options.success(model, response, options);
         } else {
             var err = res.error || error;

@@ -1,23 +1,31 @@
 <Alloy>
 	<Window class="container">
-		<View id="querybuilder">
-				<TextField id="name" hintText="name"/>
-				<TextField id="genus" hintText="genus"/>
-				<TextField id="recordist" hintText="recordist"/>
-				<TextField id="country" hintText="country"/>
-				<TextField id="location" hintText="location"/>
-				<TextField id="remarks" hintText="remarks"/>
-				<TextField id="lat" hintText="lat"/>
-				<TextField id="lng" hintText="lng"/>
-				<TextField id="also" hintText="also"/>
-				<TextField id="type" hintText="type"/>
-				<TextField id="nr" hintText="nr"/>
-				<TextField id="quality" hintText="quality"/>
-				<TextField id="qualitylt" hintText="qualitylt"/>
-				<TextField id="area" hintText="area"/>
-				<Button onClick="search">Search</Button>
-				<Button onClick="cancel">Cancel</Button>
-		</View>	
-		<TableView id="recordings" onClick="play"/>
+		<WebView id="images"/>
+		<View id="panel" onSwipe="minimaxi">
+			<Label id="title">Xeno-canto DB Query Builder</Label>
+			<View id="querybuilder">
+					<TextField id="name" hintText="name"/>
+					<TextField id="genus" hintText="genus"/>
+					<TextField id="recordist" hintText="recordist"/>
+					<TextField id="country" hintText="country"/>
+					<TextField id="location" hintText="location"/>
+					<TextField id="remarks" hintText="remarks"/>
+					<TextField id="lat" hintText="latitude"/>
+					<TextField id="lng" hintText="longitude"/>
+					<TextField id="also" hintText="also featuring"/>
+					<TextField id="type" hintText="type"/>
+					<TextField id="nr" hintText="catalog nr."/>
+					<TextField id="quality" hintText="quality"/>
+					<TextField id="qualitylt" hintText="quality < "/>
+					<TextField id="area" hintText="area"/>
+					<ButtonBar id="buttonbar" onClick='dothis'>
+						<Labels>
+							<Label>Search</Label>
+							<Label>Cancel</Label>
+						</Labels>
+					</ButtonBar>
+			</View>
+			<TableView id="recordings" onClick="play"/>
+		</View>
 	</Window>
 </Alloy>

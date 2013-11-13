@@ -76,6 +76,7 @@ module.exports.sync = function(method, model, options) {
 				var respObj = JSON.parse(response);
 				// sending back the model with fetched data in entity attribute
 				model.set({recordings: respObj.recordings});
+				model.set({numRecordings: respObj.numRecordings});
 				options.success(model, response, options);
 			} else {
 				// Calls the default Backbone error callback

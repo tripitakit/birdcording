@@ -2,25 +2,62 @@
 	backgroundColor:"white",
 	layout:'vertical'
 },
-
-"#recordings": {
-	top:10,
-	font: {fontSize:22}
-},
-"#querybuilder":{
-	layout:"horizontal",
-	height:Ti.UI.SIZE,
+"#panel":{
+	layout:"vertical",
+	minimized: false,
 }
+
 "TextField":{
 	top:5,
 	height:40,
-	font: {fontSize:24},
+	font: {fontSize:18},
 	width: "33%",
-}
+},
+
 "Button":{
 	top:5,
-	height:40,
-	font: {fontSize:24},
+	height:30,
+	font: {fontSize:18},
 	width:"17%",
 	
+},
+'#images': {
+	top:"30",
+	height:"300",
+	width:"95%",
+	url:"http://en.wikipedia.org/wiki/List_of_birds_by_common_name",
+	disableBounce:true,
 }
+
+"#buttonbar": {
+	height:"35",
+	width:"33%"	
+},
+
+"#recordings": {
+	font: {fontSize:18}
+},
+"#querybuilder":{
+	width:"95%",
+	top:10,
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+	},
+"#title":{
+	width:"95%",
+	top:10,
+	height: "30",
+	backgroundColor:"#efefef",
+	font: {fontSize:18, fontWeight:"bold"}
+},
+
+
+
+
+
+
+
+
+
+
+
