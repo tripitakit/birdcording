@@ -13,7 +13,7 @@ var API_URL= 'http://www.xeno-canto.org/api/recordings.php?query=';
 module.exports.sync = function(method, model, options) {
 	Ti.API.info("SYNC!");
 	var query = model.toJSON();
-	var	error;
+	var error;
 
 	switch(method) {
 
@@ -79,9 +79,7 @@ module.exports.sync = function(method, model, options) {
 				model.set({numRecordings: respObj.numRecordings});
 				options.success(model, response, options);
 			} else {
-				// Calls the default Backbone error callback
-				// and invokes a custom callback if options.error was defined.
-				var err = res.error || error;
+				var err = response.error || error;
 				Ti.API.error('ERROR: ' + err);
 				options.error(model, error, options);
 				model.trigger('error');
