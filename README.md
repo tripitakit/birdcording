@@ -1,4 +1,4 @@
-#Bircordings#
+#Birdcordings#
 
 Appcelerator Titanium iPad application aimed at the exploration of birds sounds
 searching in the xeno-canto recordings database.
