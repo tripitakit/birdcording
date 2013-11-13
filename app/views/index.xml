@@ -1,0 +1,23 @@
+<Alloy>
+	<Window class="container">
+		<View id="querybuilder">
+				<TextField id="name" hintText="name"/>
+				<TextField id="genus" hintText="genus"/>
+				<TextField id="recordist" hintText="recordist"/>
+				<TextField id="country" hintText="country"/>
+				<TextField id="location" hintText="location"/>
+				<TextField id="remarks" hintText="remarks"/>
+				<TextField id="lat" hintText="lat"/>
+				<TextField id="lng" hintText="lng"/>
+				<TextField id="also" hintText="also"/>
+				<TextField id="type" hintText="type"/>
+				<TextField id="nr" hintText="nr"/>
+				<TextField id="quality" hintText="quality"/>
+				<TextField id="qualitylt" hintText="qualitylt"/>
+				<TextField id="area" hintText="area"/>
+				<Button onClick="search">Search</Button>
+				<Button onClick="cancel">Cancel</Button>
+		</View>	
+		<TableView id="recordings" onClick="play"/>
+	</Window>
+</Alloy>

@@ -1,0 +1,26 @@
+".container": {
+	backgroundColor:"white",
+	layout:'vertical'
+},
+
+"#recordings": {
+	top:10,
+	font: {fontSize:22}
+},
+"#querybuilder":{
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+}
+"TextField":{
+	top:5,
+	height:40,
+	font: {fontSize:24},
+	width: "33%",
+}
+"Button":{
+	top:5,
+	height:40,
+	font: {fontSize:24},
+	width:"17%",
+	
+}
