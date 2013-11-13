@@ -14,7 +14,7 @@ function tableRowsFor(recordings){
 }
 
 function play(e){
-	Ti.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_AMBIENT;
+	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
 	
 	var player;
 	
@@ -47,7 +47,9 @@ function play(e){
 		}
 	
 		function playIt(){
-			player = Ti.Media.createSound({url: soundfile.nativePath});
+			player = Titanium.Media.createSound({
+				url: soundfile.nativePath,
+			});
 			player.addEventListener("complete", function(){
 				row.setBackgroundColor("#efefef");
 				row.title = row.title.replace(" > Playing...","");

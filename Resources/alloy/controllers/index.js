@@ -9,12 +9,13 @@ function Controller() {
     }
     function play(e) {
         function playIt() {
-            player = Ti.Media.createSound({
+            player = Titanium.Media.createSound({
                 url: soundfile.nativePath
             });
             player.addEventListener("complete", function() {
                 row.setBackgroundColor("#efefef");
                 row.title = row.title.replace(" > Playing...", "");
+                player.release();
                 player = null;
             });
             Ti.API.info("PLAY CACHED", row.file);
@@ -22,7 +23,7 @@ function Controller() {
             row.setBackgroundColor("green");
             player.play();
         }
-        Ti.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_AMBIENT;
+        Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
         var player;
         var row = e.source;
         var fname = e.row.file.replace("http://www.xeno-canto.org/download.php?XC=", "");
